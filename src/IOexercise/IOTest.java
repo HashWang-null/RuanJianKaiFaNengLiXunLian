@@ -15,6 +15,14 @@ public class IOTest {
     static  String  filepath = "D:/Desktap/1.txt";
 
     public static void main(String[] args) {
+        try {
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("1.txt"));
+            bos.write("111".getBytes());
+            bos.flush();
+            bos.close();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
